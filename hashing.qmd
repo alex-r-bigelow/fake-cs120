@@ -1,0 +1,179 @@
+---
+title: "Hashing"
+subtitle: "CSc 120: Introduction to Computer Programming II"
+date: "2 May 2024"
+format:
+  revealjs:
+    theme: [dark, dark.scss]
+    # include-in-header: |
+    #   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Voltaire&display=swap" />
+    show-slide-number: all
+---
+
+## [Benchmarking homework](/linkToNowhere.qmd)
+#### Debrief / check-in
+
+- What was the hardest part?
+- What was fun about it?
+- What was <strong class="orange">NOT</strong> fun about it?
+- If you did it again, how would you do it differently?
+
+## The <strong class="green">fastest <img src="sus.svg" class="inline-x"/></strong> search algorithm
+
+- Linear / sequential (linked list)
+  - Items don't have to be sorted
+  - Search: <span class="teal">$O(n)$</span> Insert, Delete: <span class="teal">$O(1)$</span>
+
+::: fragment
+- Binary (linked list)
+  - Keep items sorted
+  - Search, Insert, Delete: <span class="teal">$O(log\ n)$</span>
+:::
+
+::: fragment
+- <strong class="green"><img src="sus.svg" class="inline"/>Magic</strong> search: <span class="teal">$O(1)$</span> to access, insert, delete
+:::
+
+::: fragment
+<strong class="green"><img src="sus.svg" class="inline"/> Do you believe me?</strong>
+:::
+
+## Python { .hide-slide-title }
+
+{{< include badDictCode.qmd >}}
+
+::: fragment
+What if you give it more than `capacity` values?
+:::
+
+# How to handle collisions?
+
+## Probing, double hashing, separate chaining {.hide-slide-title }
+
+<strong class="pink">Probing</strong>: use neighboring empty cells!
+
+::: fragment
+
+<strong class="pink">Double hashing</strong>: Use an extra function to prevent clustering around common values!
+
+:::
+
+::: fragment
+
+<strong class="pink">Separate chaining</strong>: Default to another data structure!
+
+:::
+
+<br/>
+
+::: fragment
+
+Although hash tables can often be <span class="teal">$\Theta(1)$</span> in practice...
+
+<strong class="green"><img src="sus.svg" class="inline-x"/>collisions mean that worst-case performance is <span class="teal">$O(n)$</span></strong>
+
+:::
+
+# What's a good hash function?
+
+## If you know the keys are numbers
+
+- Digits in order? <ul style="list-style-type:none">
+    <li><small>This is the basic idea behind [Radix sort](https://en.wikipedia.org/wiki/Radix_sort)!</small></li>
+    <li class="fragment">What if the keys are phone numbers from the same area code?</li>
+  </ul>
+
+::: fragment
+- Reverse order?
+:::
+
+::: fragment
+- Other ideas?
+:::
+
+## If you know the keys are strings
+
+- First / last letters?
+
+- String length?
+
+- Other ideas?
+
+## Something else?
+
+- Can't use hash tables with keys that aren't <strong class="purple">"hashable"</strong>
+
+- What <strong class="purple">"hashable"</strong> means... is up to you!
+  - Only requirement is a (quick!) way to turn keys into numbers that are as uniformly-spread as possible
+  - If you're using someone else's hash table (e.g. python's `dict`), what "hashable" means—and how uniformly the table fills up!—is up to them
+
+# Load factor
+
+## Formula { .hide-slide-title }
+
+How full is a particular hash table?
+
+For a hash table with $N$ keys and $M$ capacity:
+
+$$
+\lambda = N / M
+$$
+
+## Rule of thumb { .hide-slide-title }
+
+Average number of probes:
+
+:::: { .columns }
+
+::: {.column}
+$$
+\frac{1}{2}(1+\frac{1}{1-\lambda})
+$$
+:::
+
+::: {.column}
+for successful searches
+:::
+
+::::
+
+
+:::: { .columns }
+
+::: {.column}
+$$
+\frac{1}{2}(1+\frac{1}{(1-\lambda)^2})
+$$
+:::
+
+::: {.column}
+for unsuccessful searches
+:::
+
+::::
+
+::: fragment
+$\lambda = 1$ is pretty bad <strong class="orange">(approaches ∞)</strong>
+:::
+
+
+::: fragment
+$\lambda < 0.75$ is ... not so bad ($2.5$, $8.5$)
+:::
+
+# How does python's `dict` work IRL?
+
+<strong class="purple">Common complaint out in the real world</strong>:
+
+`dict` seems to be taking lots of memory and/or getting slow... what's going on inside?
+
+[StackOverflow answer](https://stackoverflow.com/a/9022835/1058935)
+
+# Final assignment { .hide-slide-title }
+### <a href="/assignment.qmd">Final assignment</a> of the semester <img src="partyParrot.gif" class="inline"/>
+
+Fix <strong class="cb-green">collisions</strong> in this (incorrect!) implementation
+
+{{< include badDictCodeWithHint.qmd >}}
+
+Extra credit for <strong class="cb-pink">creative</strong> <strong class="cb-teal">hash</strong> functions, <strong class="cb-purple">collision</strong> strategies

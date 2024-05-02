@@ -1,0 +1,119 @@
+@import "common.scss";
+
+/*-- scss:defaults --*/
+
+$link-color: $cb-dark-teal;
+$body-bg: $my-white;
+$body-color: $my-black;
+
+// Syntax highlighting
+:root,
+.reveal {
+  div.sourceCode {
+    background-color: darken($my-white, 5%);
+    border: 1px solid darken($my-white, 10%) !important;
+  }
+  li code:not(.sourceCode),
+  p code:not(.sourceCode) {
+    background-color: darken($my-white, 5%);
+  }
+  code a {
+    color: $cb-dark-grey;
+  }
+  .at {
+    color: $cb-dark-pink;
+  }
+  .ex {
+    color: $cb-dark-pink;
+  }
+  .ot {
+    color: $cb-dark-pink;
+  }
+  .re {
+    color: $cb-dark-pink;
+  }
+  .va {
+    color: $cb-dark-pink;
+  }
+  .bu {
+    color: $cb-dark-green;
+  }
+  .ch {
+    color: $cb-dark-green;
+  }
+  .im {
+    color: $cb-dark-green;
+  }
+  .sc {
+    color: $cb-dark-green;
+  }
+  .ss {
+    color: $cb-dark-green;
+  }
+  .st {
+    color: $cb-dark-green;
+  }
+  .vs {
+    color: $cb-dark-green;
+  }
+  .an {
+    color: $cb-dark-purple;
+  }
+  .bn {
+    color: $cb-dark-purple;
+  }
+  .dv {
+    color: $cb-dark-purple;
+  }
+  .fl {
+    color: $cb-dark-purple;
+  }
+  .in {
+    color: $cb-dark-purple;
+  }
+  .pp {
+    color: $cb-dark-yellow;
+  }
+  .wa {
+    color: $cb-dark-yellow;
+  }
+  .al {
+    color: $cb-dark-orange;
+  }
+  .er {
+    color: $cb-dark-orange;
+  }
+  .an {
+    color: $my-black;
+  }
+  .co {
+    color: $cb-dark-grey;
+  }
+  .do {
+    color: $cb-dark-grey;
+  }
+  .cf {
+    color: $cb-dark-teal;
+  }
+  .dt {
+    color: $cb-dark-teal;
+  }
+  .fu {
+    color: $cb-dark-teal;
+  }
+  .kw {
+    color: $cb-dark-teal;
+  }
+  .op {
+    color: $cb-dark-teal;
+  }
+  .cn {
+    color: $cb-dark-brown;
+  }
+  .cv {
+    color: $cb-dark-brown;
+  }
+}
+.reveal code {
+  color: $cb-dark-teal !important;
+}

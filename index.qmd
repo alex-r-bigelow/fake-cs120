@@ -1,0 +1,38 @@
+---
+title: "CSC 120: Introduction to Computer Programming II"
+---
+
+***This is a fake course website for a job talk***
+
+## Fall 2024
+
+(pretend there's a syllabus, office hours, etc. here!)
+
+## Lectures
+
+- Course Intro
+- Python review
+- Testing and Debugging
+- Into some python weeds
+- Linked Lists
+- Stacks and Queues
+- Recursion
+- Trees
+- Complexity
+- List complexity
+- Recursive complexity
+- [Hashing](./hashing.qmd)
+- Python Extras
+
+## Assignments
+
+All assignments are due at the beginning of class on the corresponding due date; [more info about how grading works in this course](/linkNowhere.qmd)
+
+|   | Assignment                      | Due Date | Debrief  |
+|---|---------------------------------|----------|----------|
+| 0 | Setting up your dev environment |          | Notes |
+| 1 | Python code golf                |          | Solution |
+| 2 | DIY lists                       |          | Solution |
+| 3 | Trees                           |          | Solution |
+| 4 | Benchmarking                    | 2 May 2024 | Solution |
+| 5 | [DIY dicts](/assignment.qmd)    |          | [Solution](/solution.qmd) |

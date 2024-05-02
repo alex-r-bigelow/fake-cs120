@@ -1,0 +1,8 @@
+/* css styles */
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin: 3em;
+}

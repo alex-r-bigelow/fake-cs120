@@ -1,0 +1,74 @@
+---
+title: "DIY dicts"
+subtitle: "CSc 120: Introduction to Computer Programming II"
+---
+
+## Core Requirements
+
+Handle <strong class="green">collisions</strong> in the (incorrect!) implementation from the [lecture](/hashing.qmd):
+
+{{< include badDictCodeWithHint.qmd >}}
+
+## Extra credit opportunities
+
+Extra credit for <strong class="pink">creative</strong> <strong class="teal">hash</strong> functions, <strong class="purple">collision</strong> strategies\*
+
+<small>\* Solutions that employ forms of [acceptable cheating](#acceptable-cheating) are not eligible for extra credit</small>
+
+Things to inspect that might help:
+
+- Look inside the `data.json` and `test.py` files; is the test code using keys in a way that you could exploit to hash quickly, and avoid collitions?
+- Extra credit will be awarded separately to the most performant solution *for each type of key*. 
+
+### Running and testing your solution 
+
+Download and extract the [assignment](/linkNowhere.zip)
+
+<strong class="teal">ONLY EDIT</strong> the `dictionary.py` file
+
+To test for correctness, run `python test.py`
+
+To test for performance, run `python benchmark.py`
+
+<small>After the last assignment, that code should look familiar!</small>
+
+#### Acceptable cheating
+
+*Hint: It's possible to implement this using the existing python `dict`, and/or ignore the `capacity` setting to achieve better performance... but unless you make a REALLY compelling argument, doing this won't qualify you for extra credit*
+
+As with other assignments in this course, <strong class="teal">collaboration</strong> and <strong class="pink">creative ways around the problem</strong> are encouraged!
+
+Copypasta from Stackoverflow or AI-generated solutions are also allowed (but discouraged).
+
+However, in all cases when you're up to something sneaky, you <strong class="orange">MUST COMMENT YOUR CODE</strong> about where you got something that you didn't write, and/or when you're sneaking around the problem, or you risk getting a <strong class="orange">ZERO</strong> on the assignment (fully up to the discretion of the instructor).
+
+If you attempt, to stay safe, make sure that you include comments that:
+
+- Give props about <strong class="purple">who</strong> and <strong class="purple">how</strong> specific classmates helped you
+- Cite the source websites / tools that helped you, for which chunks of code
+- For workarounds, describe how you're avoiding the spirit of the assignment—I want to know that you know what you're doing
+
+### What to submit
+
+Upload your modified `dictionary.py` file here:
+
+<form>
+  <fieldset>
+    <label for="studentId">Your student ID</label>
+    <input type="text" id="studentId"/>
+  </fieldset>
+  <fieldset>
+    <label for="extraCredit">Test my code for potential extra credit!</label>
+    <input type="checkbox" id="extraCredit"/>
+    <br/>
+    <small class="orange">Please do NOT check this box if we'd be likely to consider your solution to be [acceptable cheating](#acceptable-cheating)</small>
+  </fieldset>
+  <fieldset>
+    <input type="file"/>
+  </fieldset>
+  <fieldset>
+    <button>Submit</button>
+  </fieldset>
+</form>
+
+For this assignment, submit as many solutions as you like!

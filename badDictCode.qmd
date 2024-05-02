@@ -1,0 +1,19 @@
+```python
+class Dictionary:
+  def __init__(self, capacity):
+    self._data = [None] * capacity
+    self._next = 0
+  
+  def hash(value):
+    index = self._next
+    self._next = self._next + 1 if self._next < len(self._data) - 1 else 0
+    return index
+  
+  def put(self, key, value):
+    index = self.hash(key)
+    self._data[index] = (key, value)
+  
+  def get(self, key):
+    index = self.hash(key)
+    return self._data[index]
+```

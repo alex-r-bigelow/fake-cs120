@@ -1,0 +1,19 @@
+project:
+  type: website
+
+website:
+  title: "CSc 120"
+  # navbar:
+  #   left:
+  #     - href: index.qmd
+  #       text: Home
+
+format:
+  html:
+    header-includes: |
+      <link rel="stylesheet" media="screen" href="https://fonts.googleapis.com/css2?family=Voltaire&display=swap" type="text/css"/>
+    theme:
+      light: [lux, light.scss]
+      dark: [slate, dark.scss]
+    css: styles.css
+    toc: true

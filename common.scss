@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Voltaire&display=swap");
+
+/*-- scss:defaults --*/
+
+$cb-teal: #66c2a5;
+$cb-orange: #fc8d62;
+$cb-purple: #8da0cb;
+$cb-pink: #e78ac3;
+$cb-green: #a6d854;
+$cb-yellow: #ffd92f;
+$cb-brown: #e5c494;
+$cb-grey: #b3b3b3;
+
+$cb-dark-teal: #1b9e77;
+$cb-dark-orange: #d95f02;
+$cb-dark-purple: #7570b3;
+$cb-dark-pink: #e7298a;
+$cb-dark-green: #66a61e;
+$cb-dark-yellow: #e6ab02;
+$cb-dark-brown: #a6761d;
+$cb-dark-grey: #666666;
+
+$cb-light-teal: #b3e2cd;
+$cb-light-orange: #fdcdac;
+$cb-light-purple: #cbd5e8;
+$cb-light-pink: #f4cae4;
+$cb-light-green: #e6f5c9;
+$cb-light-yellow: #fff2ae;
+$cb-light-brown: #f1e2cc;
+$cb-light-grey: #cccccc;
+
+$my-black: #1e1e1e;
+$my-white: #f1f1f1;
+
+.cb-teal {
+  color: $cb-teal;
+}
+.cb-orange {
+  color: $cb-orange;
+}
+.cb-purple {
+  color: $cb-purple;
+}
+.cb-pink {
+  color: $cb-pink;
+}
+.cb-green {
+  color: $cb-green;
+}
+.cb-yellow {
+  color: $cb-yellow;
+}
+.cb-brown {
+  color: $cb-brown;
+}
+.cb-grey {
+  color: $cb-grey;
+}
+
+.teal,
+.cb-dark-teal {
+  color: $cb-dark-teal;
+}
+.orange,
+.cb-dark-orange {
+  color: $cb-dark-orange;
+}
+.purple,
+.cb-dark-purple {
+  color: $cb-dark-purple;
+}
+.pink,
+.cb-dark-pink {
+  color: $cb-dark-pink;
+}
+.green,
+.cb-dark-green {
+  color: $cb-dark-green;
+}
+.yellow,
+.cb-dark-yellow {
+  color: $cb-dark-yellow;
+}
+.brown,
+.cb-dark-brown {
+  color: $cb-dark-brown;
+}
+.grey,
+.cb-dark-grey {
+  color: $cb-dark-grey;
+}
+
+.cb-light-teal {
+  color: $cb-light-teal;
+}
+.cb-light-orange {
+  color: $cb-light-orange;
+}
+.cb-light-purple {
+  color: $cb-light-purple;
+}
+.cb-light-pink {
+  color: $cb-light-pink;
+}
+.cb-light-green {
+  color: $cb-light-green;
+}
+.cb-light-yellow {
+  color: $cb-light-yellow;
+}
+.cb-light-brown {
+  color: $cb-light-brown;
+}
+.cb-light-grey {
+  color: $cb-light-grey;
+}
+
+.white,
+.my-white {
+  color: $my-white;
+}
+.black,
+.my-black {
+  color: $my-black;
+}
+
+/*-- scss:rules --*/
+
+:root,
+.reveal {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  th {
+    font-family: "Voltaire", "Trebuchet MS", sans-serif !important;
+  }
+
+  .hide-slide-title {
+    h1,
+    h2 {
+      display: none;
+    }
+  }
+
+  img.inline,
+  img.inline-x {
+    display: inline-block;
+  }
+  img.inline {
+    width: 0.65em;
+    height: 0.65em;
+    margin: 0 0.2em;
+  }
+  img.inline-x {
+    width: 1ex;
+    height: 1ex;
+    margin: 0 0.2ex;
+  }
+
+  iframe {
+    width: 100%;
+    height: 100%;
+  }
+}
