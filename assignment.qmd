@@ -5,9 +5,13 @@ subtitle: "CSC 120: Introduction to Computer Programming II"
 
 ## Core Requirements
 
-Handle <strong class="green">collisions</strong> in the (incorrect!) implementation from the [lecture](/hashing.qmd):
+Starting from the (incorrect!) implementation from the [lecture](/hashing.qmd):
 
 {{< include badDictCodeWithHint.qmd >}}
+
+1. Handle collisions correctly
+2. Implement a custom hash function; what you do is up to you. Please leave comments explaining your rationale!
+3. Increase the size of the hash table when the Load factor $\lambda >= 0.75$
 
 ## Extra credit opportunities
 

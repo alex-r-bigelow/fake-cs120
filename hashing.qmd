@@ -89,13 +89,13 @@ Although hash tables can often be <span class="teal">$\Theta(1)$</span> in pract
 
 ## If you know the keys are numbers
 
-- Digits in order? <ul style="list-style-type:none">
+- First digit(s)? <ul style="list-style-type:none">
     <li><small>This is the basic idea behind [Radix sort](https://en.wikipedia.org/wiki/Radix_sort)!</small></li>
     <li class="fragment">What if the keys are phone numbers from the same area code?</li>
   </ul>
 
 ::: fragment
-- Reverse order?
+- Last digit(s)?
 :::
 
 ::: fragment
@@ -110,7 +110,7 @@ Although hash tables can often be <span class="teal">$\Theta(1)$</span> in pract
 
 - First / last letters?
 
-- String length?
+- Use number strategy with string length? or string -> binary -> integer?
 
 - Other ideas?
 
@@ -119,12 +119,10 @@ Although hash tables can often be <span class="teal">$\Theta(1)$</span> in pract
 - Can't use hash tables with keys that aren't <strong class="purple">"hashable"</strong>
 
 - What <strong class="purple">"hashable"</strong> means... is up to you!
-  - Only requirement is a (quick!) way to turn keys into integers `< capacity` that are as uniformly-spread as possible
+  - Only requirements are a <strong class="orange">quick</strong>, <strong class="green">deterministic</strong> way to turn keys into integers `< capacity`, that are <strong class="pink">as uniformly-spread as possible</strong>
   - If you're using someone else's hash table (e.g. python's `dict`), what "hashable" means—and how uniformly the table fills up!—is up to them
 
 # Load factor
-
-## Formula { .hide-slide-title }
 
 How full is a particular hash table?
 
@@ -134,11 +132,9 @@ $$
 \lambda = N / M
 $$
 
-## Rule of thumb { .hide-slide-title }
+## Average number of probles
 
-Average number of probes:
-
-:::: { .columns }
+:::: { .columns style='display: flex !important; align-items: center' }
 
 ::: {.column}
 $$
@@ -152,8 +148,7 @@ for successful searches
 
 ::::
 
-
-:::: { .columns }
+:::: { .columns style='display: flex !important; align-items: center' }
 
 ::: {.column}
 $$
@@ -167,14 +162,27 @@ for unsuccessful searches
 
 ::::
 
-::: fragment
+# Rule of thumb { .hide-slide-title }
+
+:::: { .columns style='display: flex !important; align-items: center' }
+
+::: {.column}
+
 $\lambda = 1$ is pretty bad <strong class="orange">(approaches ∞)</strong>
+
+$\lambda < 0.75$ is ... not so bad ($2.5$, $1.6$)
+
+::::: fragment
+Usually a good idea to increase the size of the hash table when it's about $\frac{3}{4}$ full
+:::::
+
 :::
 
-
-::: fragment
-$\lambda < 0.75$ is ... not so bad ($2.5$, $8.5$)
+::: {.column}
+![](loadFactor.png)
 :::
+
+::::
 
 # How does python's `dict` work IRL?
 
