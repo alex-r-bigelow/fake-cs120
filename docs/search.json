@@ -56,18 +56,11 @@
     "text": "Something else?\n\nCan’t use hash tables with keys that aren’t “hashable”\nWhat “hashable” means… is up to you!\n\nOnly requirements are a quick, deterministic way to turn keys into integers &lt; capacity, that are as uniformly-spread as possible\nIf you’re using someone else’s hash table (e.g. python’s dict), what “hashable” means—and how uniformly the table fills up!—is up to them"
   },
   {
-    "objectID": "hashing.html#formula",
-    "href": "hashing.html#formula",
+    "objectID": "hashing.html#average-number-of-probles",
+    "href": "hashing.html#average-number-of-probles",
     "title": "CSC 120",
-    "section": "Formula",
-    "text": "Formula\nHow full is a particular hash table?\nFor a hash table with \\(N\\) keys and \\(M\\) capacity:\n\\[\n\\lambda = N / M\n\\]"
-  },
-  {
-    "objectID": "hashing.html#rule-of-thumb",
-    "href": "hashing.html#rule-of-thumb",
-    "title": "CSC 120",
-    "section": "Rule of thumb",
-    "text": "Rule of thumb\nAverage number of probes:\n\n\n\\[\n\\frac{1}{2}(1+\\frac{1}{1-\\lambda})\n\\]\n\nfor successful searches\n\n\n\n\n\\[\n\\frac{1}{2}(1+\\frac{1}{(1-\\lambda)^2})\n\\]\n\nfor unsuccessful searches\n\n\n\n\\(\\lambda = 1\\) is pretty bad (approaches ∞)\n\n\n\\(\\lambda &lt; 0.75\\) is … not so bad (\\(2.5\\), \\(8.5\\))"
+    "section": "Average number of probles",
+    "text": "Average number of probles\n\n\n\\[\n\\frac{1}{2}(1+\\frac{1}{1-\\lambda})\n\\]\n\nfor successful searches\n\n\n\n\n\\[\n\\frac{1}{2}(1+\\frac{1}{(1-\\lambda)^2})\n\\]\n\nfor unsuccessful searches"
   },
   {
     "objectID": "badDictCode.html",
@@ -152,12 +145,5 @@
     "title": "DIY dicts",
     "section": "What to submit",
     "text": "What to submit\nUpload your modified dictionary.py file here:\n\n\nYour student ID \n\n\nTest my code for potential extra credit!   Please do NOT check this box if we’d be likely to consider your solution to be acceptable cheating\n\n\n\n\n\n\nSubmit\n\n\n\nFor this assignment, submit as many solutions as you like!"
-  },
-  {
-    "objectID": "hashing.html#average-number-of-probles",
-    "href": "hashing.html#average-number-of-probles",
-    "title": "CSC 120",
-    "section": "Average number of probles",
-    "text": "Average number of probles\n\n\n\\[\n\\frac{1}{2}(1+\\frac{1}{1-\\lambda})\n\\]\n\nfor successful searches\n\n\n\n\n\\[\n\\frac{1}{2}(1+\\frac{1}{(1-\\lambda)^2})\n\\]\n\nfor unsuccessful searches"
   }
 ]
