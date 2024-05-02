@@ -176,8 +176,6 @@ $\lambda = 1$ is pretty bad <strong class="orange">(approaches ∞)</strong>
 $\lambda < 0.75$ is ... not so bad ($2.5$, $8.5$)
 :::
 
-## 
-
 # How does python's `dict` work IRL?
 
 <strong class="purple">Common complaint out in the real world</strong>:
