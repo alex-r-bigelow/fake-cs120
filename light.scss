@@ -16,6 +16,7 @@ $body-color: $my-black;
   li code:not(.sourceCode),
   p code:not(.sourceCode) {
     background-color: darken($my-white, 5%);
+    color: $cb-dark-teal !important;
   }
   code a {
     color: $cb-dark-grey;

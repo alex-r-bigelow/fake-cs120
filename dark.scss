@@ -5,17 +5,30 @@
 $link-color: $cb-yellow;
 $body-bg: $my-black;
 $body-color: $my-white;
+$heading-color: $my-white;
+$input-bg: $my-black;
+$popover-bg: $my-black;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h5 {
+  color: $my-white !important;
+}
 
 // Syntax highlighting
 :root,
 .reveal {
   div.sourceCode {
-    background-color: lighten($my-black, 5%);
-    border: 1px solid lighten($my-black, 10%) !important;
+    background-color: lighten($my-black, 2%);
+    border: 1px solid lighten($my-black, 5%) !important;
   }
   li code:not(.sourceCode),
   p code:not(.sourceCode) {
-    background-color: lighten($my-black, 5%);
+    background-color: lighten($my-black, 2%);
+    color: $cb-dark-teal !important;
   }
   code a {
     color: $cb-grey;

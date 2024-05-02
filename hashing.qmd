@@ -1,7 +1,4 @@
 ---
-title: "Hashing"
-subtitle: "CSc 120: Introduction to Computer Programming II"
-date: "2 May 2024"
 format:
   revealjs:
     theme: [dark, dark.scss]
@@ -9,6 +6,14 @@ format:
     #   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Voltaire&display=swap" />
     show-slide-number: all
 ---
+
+## Hashing { .manual-title-slide }
+### CSc 120: Introduction to Computer Programming II
+
+<br/>
+<br/>
+
+Slides available at [https://alex-r-bigelow.github.io/fake-cs120](https://alex-r-bigelow.github.io/fake-cs120)
 
 ## [Benchmarking homework](/linkToNowhere.qmd)
 #### Debrief / check-in
@@ -170,7 +175,7 @@ $\lambda < 0.75$ is ... not so bad ($2.5$, $8.5$)
 [StackOverflow answer](https://stackoverflow.com/a/9022835/1058935)
 
 # Final assignment { .hide-slide-title }
-### <a href="/assignment.qmd">Final assignment</a> of the semester <img src="partyParrot.gif" class="inline"/>
+<h3><a href="/assignment.qmd">Final assignment</a> of the semester <img src="partyParrot.gif" class="inline"/></h3>
 
 Fix <strong class="cb-green">collisions</strong> in this (incorrect!) implementation
 

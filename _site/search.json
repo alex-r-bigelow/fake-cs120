@@ -67,26 +67,26 @@
     "href": "assignment.html#extra-credit-opportunities",
     "title": "DIY dicts",
     "section": "Extra credit opportunities",
-    "text": "Extra credit opportunities\nExtra credit for creative hash functions, collision strategies*\n* Solutions that employ forms of acceptable cheating are not eligible for extra credit\nThings to inspect that might help:\n\nLook inside the data.json and test.py files; is the test code using keys in a way that you could exploit to hash quickly, and avoid collitions?\nExtra credit will be awarded separately to the most performant solution for each type of key.\n\n\nRunning and testing your solution\nDownload and extract the assignment\nONLY EDIT the dictionary.py file\nTo test for correctness, run python test.py\nTo test for performance, run python benchmark.py\nAfter the last assignment, that code should look familiar!\n\nAcceptable cheating\nHint: It’s possible to implement this using the existing python dict, and/or ignore the capacity setting to achieve better performance… but unless you make a REALLY compelling argument, doing this won’t qualify you for extra credit\nAs with other assignments in this course, collaboration and creative ways around the problem are encouraged!\nCopypasta from Stackoverflow or AI-generated solutions are also allowed (but discouraged).\nHowever, in all cases when you’re up to something sneaky, you MUST COMMENT YOUR CODE about where you got something that you didn’t write, and/or when you’re sneaking around the problem, or you risk getting a ZERO on the assignment (fully up to the discretion of the instructor).\nIf you attempt, to stay safe, make sure that you include comments that:\n\nGive props about who and how specific classmates helped you\nCite the source websites / tools that helped you, for which chunks of code\nFor workarounds, describe how you’re avoiding the spirit of the assignment—I want to know that you know what you’re doing\n\n\n\n\nWhat to submit\nUpload your modified dictionary.py file here:\n\n\nYour student ID \n\n\nTest my code for potential extra credit!   Please do NOT check this box if we’d be likely to consider your solution to be acceptable cheating\n\n\n\n\n\n\nSubmit\n\n\n\nFor this assignment, submit as many solutions as you like!"
+    "text": "Extra credit opportunities\nExtra credit for creative hash functions and collision strategies*\n* Solutions that employ forms of acceptable cheating are not eligible for extra credit\nThings to inspect that might help:\n\nLook inside the data.json and test.py files; is the test code using keys in a way that you could exploit to hash quickly, and avoid collitions?\nExtra credit will be awarded separately to the most performant solution for each type of key."
   },
   {
     "objectID": "hashing.html#benchmarking-homework",
     "href": "hashing.html#benchmarking-homework",
-    "title": "Hashing",
+    "title": "CSc 120",
     "section": "Benchmarking homework",
     "text": "Benchmarking homework\nDebrief / check-in\n\nWhat was the hardest part?\nWhat was fun about it?\nWhat was NOT fun about it?\nIf you did it again, how would you do it differently?"
   },
   {
     "objectID": "hashing.html#the-fastest-search-algorithm",
     "href": "hashing.html#the-fastest-search-algorithm",
-    "title": "Hashing",
+    "title": "CSc 120",
     "section": "The fastest  search algorithm",
     "text": "The fastest  search algorithm\n\nLinear / sequential (linked list)\n\nItems don’t have to be sorted\nSearch: \\(O(n)\\) Insert, Delete: \\(O(1)\\)\n\n\n\n\nBinary (linked list)\n\nKeep items sorted\nSearch, Insert, Delete: \\(O(log\\ n)\\)\n\n\n\n\n\nMagic search: \\(O(1)\\) to access, insert, delete\n\n\n\n Do you believe me?"
   },
   {
     "objectID": "hashing.html#python",
     "href": "hashing.html#python",
-    "title": "Hashing",
+    "title": "CSc 120",
     "section": "Python",
     "text": "Python\nclass Dictionary:\n  def __init__(self, capacity):\n    self._data = [None] * capacity\n    self._next = 0\n  \n  def hash(value):\n    index = self._next\n    self._next = self._next + 1 if self._next &lt; len(self._data) - 1 else 0\n    return index\n  \n  def put(self, key, value):\n    index = self.hash(key)\n    self._data[index] = (key, value)\n  \n  def get(self, key):\n    index = self.hash(key)\n    return self._data[index]\n\nWhat if you give it more than capacity values?"
   },
@@ -170,14 +170,14 @@
   {
     "objectID": "hashing.html#formula",
     "href": "hashing.html#formula",
-    "title": "Hashing",
+    "title": "CSc 120",
     "section": "Formula",
     "text": "Formula\nHow full is a particular hash table?\nFor a hash table with \\(N\\) keys and \\(M\\) capacity:\n\\[\n\\lambda = N / M\n\\]"
   },
   {
     "objectID": "hashing.html#rule-of-thumb",
     "href": "hashing.html#rule-of-thumb",
-    "title": "Hashing",
+    "title": "CSc 120",
     "section": "Rule of thumb",
     "text": "Rule of thumb\nAverage number of probes:\n\n\n\\[\n\\frac{1}{2}(1+\\frac{1}{1-\\lambda})\n\\]\n\nfor successful searches\n\n\n\n\n\\[\n\\frac{1}{2}(1+\\frac{1}{(1-\\lambda)^2})\n\\]\n\nfor unsuccessful searches\n\n\n\n\\(\\lambda = 1\\) is pretty bad (approaches ∞)\n\n\n\\(\\lambda &lt; 0.75\\) is … not so bad (\\(2.5\\), \\(8.5\\))"
   },
@@ -191,7 +191,7 @@
   {
     "objectID": "hashing.html#probing-double-hashing-separate-chaining",
     "href": "hashing.html#probing-double-hashing-separate-chaining",
-    "title": "Hashing",
+    "title": "CSc 120",
     "section": "Probing, double hashing, separate chaining",
     "text": "Probing, double hashing, separate chaining\nProbing: use neighboring empty cells!\n\nDouble hashing: Use an extra function to prevent clustering around common values!\n\n\nSeparate chaining: Default to another data structure!\n\n\n\nAlthough hash tables can often be \\(\\Theta(1)\\) in practice…\ncollisions mean that worst-case performance is \\(O(n)\\)"
   },
@@ -212,22 +212,50 @@
   {
     "objectID": "hashing.html#if-you-know-the-keys-are-numbers",
     "href": "hashing.html#if-you-know-the-keys-are-numbers",
-    "title": "Hashing",
+    "title": "CSc 120",
     "section": "If you know the keys are numbers",
     "text": "If you know the keys are numbers\n\nDigits in order?\n\n\nThis is the basic idea behind Radix sort!\n\n\nWhat if the keys are phone numbers from the same area code?\n\n\n\n\n\nReverse order?\n\n\n\n\nOther ideas?"
   },
   {
     "objectID": "hashing.html#if-you-know-the-keys-are-strings",
     "href": "hashing.html#if-you-know-the-keys-are-strings",
-    "title": "Hashing",
+    "title": "CSc 120",
     "section": "If you know the keys are strings",
     "text": "If you know the keys are strings\n\nFirst / last letters?\nString length?\nOther ideas?"
   },
   {
     "objectID": "hashing.html#something-else",
     "href": "hashing.html#something-else",
-    "title": "Hashing",
+    "title": "CSc 120",
     "section": "Something else?",
     "text": "Something else?\n\nCan’t use hash tables with keys that aren’t “hashable”\nWhat “hashable” means… is up to you!\n\nOnly requirement is a (quick!) way to turn keys into numbers that are as uniformly-spread as possible\nIf you’re using someone else’s hash table (e.g. python’s dict), what “hashable” means—and how uniformly the table fills up!—is up to them"
+  },
+  {
+    "objectID": "hashing.html#hashing",
+    "href": "hashing.html#hashing",
+    "title": "CSc 120",
+    "section": "Hashing",
+    "text": "Hashing\nCSc 120: Introduction to Computer Programming II\n \nSlides available at https://alex-r-bigelow.github.io/fake-cs120"
+  },
+  {
+    "objectID": "assignment.html#running-and-testing-your-solution",
+    "href": "assignment.html#running-and-testing-your-solution",
+    "title": "DIY dicts",
+    "section": "Running and testing your solution",
+    "text": "Running and testing your solution\nDownload and extract the assignment\nONLY EDIT the dictionary.py file\nTo test for correctness, run python test.py\nTo test for performance, run python benchmark.py\nAfter the last assignment, that code should look familiar!"
+  },
+  {
+    "objectID": "assignment.html#acceptable-cheating",
+    "href": "assignment.html#acceptable-cheating",
+    "title": "DIY dicts",
+    "section": "Acceptable cheating",
+    "text": "Acceptable cheating\nAs with other assignments in this course, collaboration and creative ways around the problem are encouraged!\nCopypasta from Stackoverflow or AI-generated solutions are also allowed (but discouraged).\nHowever, in all cases when you copy something you didn’t write, or when you’re up to something sneaky, you MUST COMMENT YOUR CODE, or you risk getting a ZERO on the assignment (fully up to the discretion of the instructor).\nTo stay safe, make sure that you include comments that:\n\nGive props about who and how specific classmates helped you\nCite the source websites / tools that helped you, how they helped you, and for which chunks of code they helped you\nFor workarounds, describe how you’re avoiding the spirit of the assignment—I want to know that you know what you’re doing\n\nAlso, for this assignment, any acceptable cheating will disqualify your submission for extra credit.\nHint: It’s possible to complete this assignment using the existing python dict, and/or ignore the capacity setting to achieve better performance. If your solution ignores capacity, you must document how / why in order to recieve credit!"
+  },
+  {
+    "objectID": "assignment.html#what-to-submit",
+    "href": "assignment.html#what-to-submit",
+    "title": "DIY dicts",
+    "section": "What to submit",
+    "text": "What to submit\nUpload your modified dictionary.py file here:\n\n\nYour student ID \n\n\nTest my code for potential extra credit!   Please do NOT check this box if we’d be likely to consider your solution to be acceptable cheating\n\n\n\n\n\n\nSubmit\n\n\n\nFor this assignment, submit as many solutions as you like!"
   }
 ]

@@ -58,6 +58,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="site_libs/quarto-search/fuse.min.js"></script>
@@ -75,11 +76,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
-  "location": "sidebar",
+  "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "start",
-  "type": "textbox",
+  "panel-placement": "end",
+  "type": "overlay",
   "limit": 50,
   "keyboard-shortcut": [
     "f",
@@ -107,11 +108,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body>
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">CSc 120</span>
+    </a>
+  </div>
+        <div class="quarto-navbar-tools tools-end">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+          <div id="quarto-search" class="" title="Search"></div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
@@ -120,11 +136,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#core-requirements" id="toc-core-requirements" class="nav-link active" data-scroll-target="#core-requirements">Core Requirements</a></li>
-  <li><a href="#extra-credit-opportunities" id="toc-extra-credit-opportunities" class="nav-link" data-scroll-target="#extra-credit-opportunities">Extra credit opportunities</a>
-  <ul class="collapse">
+  <li><a href="#extra-credit-opportunities" id="toc-extra-credit-opportunities" class="nav-link" data-scroll-target="#extra-credit-opportunities">Extra credit opportunities</a></li>
   <li><a href="#running-and-testing-your-solution" id="toc-running-and-testing-your-solution" class="nav-link" data-scroll-target="#running-and-testing-your-solution">Running and testing your solution</a></li>
+  <li><a href="#acceptable-cheating" id="toc-acceptable-cheating" class="nav-link" data-scroll-target="#acceptable-cheating">Acceptable cheating</a></li>
   <li><a href="#what-to-submit" id="toc-what-to-submit" class="nav-link" data-scroll-target="#what-to-submit">What to submit</a></li>
-  </ul></li>
   </ul>
 </nav>
     </div>
@@ -176,36 +191,38 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="extra-credit-opportunities" class="level2">
 <h2 class="anchored" data-anchor-id="extra-credit-opportunities">Extra credit opportunities</h2>
-<p>Extra credit for <strong class="pink">creative</strong> <strong class="teal">hash</strong> functions, <strong class="purple">collision</strong> strategies*</p>
+<p>Extra credit for <strong class="pink">creative</strong> hash functions and collision strategies*</p>
 <p><small>* Solutions that employ forms of <a href="#acceptable-cheating">acceptable cheating</a> are not eligible for extra credit</small></p>
 <p>Things to inspect that might help:</p>
 <ul>
 <li>Look inside the <code>data.json</code> and <code>test.py</code> files; is the test code using keys in a way that you could exploit to hash quickly, and avoid collitions?</li>
 <li>Extra credit will be awarded separately to the most performant solution <em>for each type of key</em>.</li>
 </ul>
-<section id="running-and-testing-your-solution" class="level3">
-<h3 class="anchored" data-anchor-id="running-and-testing-your-solution">Running and testing your solution</h3>
+</section>
+<section id="running-and-testing-your-solution" class="level2">
+<h2 class="anchored" data-anchor-id="running-and-testing-your-solution">Running and testing your solution</h2>
 <p>Download and extract the <a href="./linkNowhere.zip">assignment</a></p>
 <p><strong class="teal">ONLY EDIT</strong> the <code>dictionary.py</code> file</p>
 <p>To test for correctness, run <code>python test.py</code></p>
 <p>To test for performance, run <code>python benchmark.py</code></p>
 <p><small>After the last assignment, that code should look familiar!</small></p>
-<section id="acceptable-cheating" class="level4">
-<h4 class="anchored" data-anchor-id="acceptable-cheating">Acceptable cheating</h4>
-<p><em>Hint: It’s possible to implement this using the existing python <code>dict</code>, and/or ignore the <code>capacity</code> setting to achieve better performance… but unless you make a REALLY compelling argument, doing this won’t qualify you for extra credit</em></p>
-<p>As with other assignments in this course, <strong class="teal">collaboration</strong> and <strong class="pink">creative ways around the problem</strong> are encouraged!</p>
+</section>
+<section id="acceptable-cheating" class="level2">
+<h2 class="anchored" data-anchor-id="acceptable-cheating">Acceptable cheating</h2>
+<p>As with other assignments in this course, <strong class="purple">collaboration</strong> and <strong class="pink">creative ways around the problem</strong> are encouraged!</p>
 <p>Copypasta from Stackoverflow or AI-generated solutions are also allowed (but discouraged).</p>
-<p>However, in all cases when you’re up to something sneaky, you <strong class="orange">MUST COMMENT YOUR CODE</strong> about where you got something that you didn’t write, and/or when you’re sneaking around the problem, or you risk getting a <strong class="orange">ZERO</strong> on the assignment (fully up to the discretion of the instructor).</p>
-<p>If you attempt, to stay safe, make sure that you include comments that:</p>
+<p>However, in all cases when you copy something you didn’t write, or when you’re up to something sneaky, you <strong class="orange">MUST COMMENT YOUR CODE</strong>, or you risk getting a <strong class="orange">ZERO</strong> on the assignment (fully up to the discretion of the instructor).</p>
+<p>To stay safe, make sure that you include comments that:</p>
 <ul>
 <li>Give props about <strong class="purple">who</strong> and <strong class="purple">how</strong> specific classmates helped you</li>
-<li>Cite the source websites / tools that helped you, for which chunks of code</li>
-<li>For workarounds, describe how you’re avoiding the spirit of the assignment—I want to know that you know what you’re doing</li>
+<li>Cite the source websites / tools that helped you, how they helped you, and for which chunks of code they helped you</li>
+<li>For <strong class="pink">workarounds</strong>, describe how you’re avoiding the spirit of the assignment—I want to know that you know what you’re doing</li>
 </ul>
+<p>Also, for this assignment, any acceptable cheating will disqualify your submission for extra credit.</p>
+<p><em>Hint: It’s possible to complete this assignment using the existing python <code>dict</code>, and/or ignore the <code>capacity</code> setting to achieve better performance. If your solution ignores <code>capacity</code>, you must document how / why in order to recieve credit!</em></p>
 </section>
-</section>
-<section id="what-to-submit" class="level3">
-<h3 class="anchored" data-anchor-id="what-to-submit">What to submit</h3>
+<section id="what-to-submit" class="level2">
+<h2 class="anchored" data-anchor-id="what-to-submit">What to submit</h2>
 <p>Upload your modified <code>dictionary.py</code> file here:</p>
 <form>
 <fieldset>
@@ -226,7 +243,6 @@ Submit
 <p>For this assignment, submit as many solutions as you like!</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
