@@ -8,12 +8,18 @@ format:
 ---
 
 ## Hashing { .manual-title-slide }
-### CSc 120: Introduction to Computer Programming II
+### CSC 120: Introduction to Computer Programming II
 
 <br/>
 <br/>
 
-Slides available at [https://alex-r-bigelow.github.io/fake-cs120](https://alex-r-bigelow.github.io/fake-cs120)
+Course webpage and slides available at
+
+[https://alex-r-bigelow.github.io/fake-cs120](https://alex-r-bigelow.github.io/fake-cs120)
+
+<br/>
+
+<small>Loosely adapted from [this semester's CSC 120 course by Professor O'Bagy](https://www.obagy.com/cs120/)</small>
 
 ## [Benchmarking homework](/linkToNowhere.qmd)
 #### Debrief / check-in
@@ -93,6 +99,10 @@ Although hash tables can often be <span class="teal">$\Theta(1)$</span> in pract
 :::
 
 ::: fragment
+- `key % capacity`
+:::
+
+::: fragment
 - Other ideas?
 :::
 
@@ -109,7 +119,7 @@ Although hash tables can often be <span class="teal">$\Theta(1)$</span> in pract
 - Can't use hash tables with keys that aren't <strong class="purple">"hashable"</strong>
 
 - What <strong class="purple">"hashable"</strong> means... is up to you!
-  - Only requirement is a (quick!) way to turn keys into numbers that are as uniformly-spread as possible
+  - Only requirement is a (quick!) way to turn keys into integers `< capacity` that are as uniformly-spread as possible
   - If you're using someone else's hash table (e.g. python's `dict`), what "hashable" means—and how uniformly the table fills up!—is up to them
 
 # Load factor
@@ -165,6 +175,8 @@ $\lambda = 1$ is pretty bad <strong class="orange">(approaches ∞)</strong>
 ::: fragment
 $\lambda < 0.75$ is ... not so bad ($2.5$, $8.5$)
 :::
+
+## 
 
 # How does python's `dict` work IRL?
 

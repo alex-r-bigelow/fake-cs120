@@ -10,7 +10,7 @@
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.4.552">
 
-  <title>CSc 120</title>
+  <title>CSC 120</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -392,9 +392,12 @@
 
 <section id="hashing" class="slide level2 manual-title-slide">
 <h2>Hashing</h2>
-<h3 id="csc-120-introduction-to-computer-programming-ii">CSc 120: Introduction to Computer Programming II</h3>
+<h3 id="csc-120-introduction-to-computer-programming-ii">CSC 120: Introduction to Computer Programming II</h3>
 <p><br> <br></p>
-<p>Slides available at <a href="https://alex-r-bigelow.github.io/fake-cs120">https://alex-r-bigelow.github.io/fake-cs120</a></p>
+<p>Course webpage and slides available at</p>
+<p><a href="https://alex-r-bigelow.github.io/fake-cs120">https://alex-r-bigelow.github.io/fake-cs120</a></p>
+<p><br></p>
+<p><small>Loosely adapted from <a href="https://www.obagy.com/cs120/">this semester’s CSC 120 course by Professor O’Bagy</a></small></p>
 </section>
 <section id="benchmarking-homework" class="slide level2">
 <h2><a href="./linkToNowhere.qmd">Benchmarking homework</a></h2>
@@ -501,6 +504,11 @@ What if the keys are phone numbers from the same area code?
 </div>
 <div class="fragment">
 <ul>
+<li><code>key % capacity</code></li>
+</ul>
+</div>
+<div class="fragment">
+<ul>
 <li>Other ideas?</li>
 </ul>
 </div>
@@ -519,7 +527,7 @@ What if the keys are phone numbers from the same area code?
 <li><p>Can’t use hash tables with keys that aren’t <strong class="purple">“hashable”</strong></p></li>
 <li><p>What <strong class="purple">“hashable”</strong> means… is up to you!</p>
 <ul>
-<li>Only requirement is a (quick!) way to turn keys into numbers that are as uniformly-spread as possible</li>
+<li>Only requirement is a (quick!) way to turn keys into integers <code>&lt; capacity</code> that are as uniformly-spread as possible</li>
 <li>If you’re using someone else’s hash table (e.g.&nbsp;python’s <code>dict</code>), what “hashable” means—and how uniformly the table fills up!—is up to them</li>
 </ul></li>
 </ul>
@@ -564,6 +572,9 @@ What if the keys are phone numbers from the same area code?
 <div class="fragment">
 <p><span class="math inline">\(\lambda &lt; 0.75\)</span> is … not so bad (<span class="math inline">\(2.5\)</span>, <span class="math inline">\(8.5\)</span>)</p>
 </div>
+</section>
+<section id="section" class="slide level2">
+<h2></h2>
 </section></section>
 <section id="how-does-pythons-dict-work-irl" class="title-slide slide level1 center">
 <h1>How does python’s <code>dict</code> work IRL?</h1>

@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  title: "CSc 120"
+  title: "CSC 120"
   navbar:
     top:
       - href: index.qmd

@@ -1,6 +1,6 @@
 ---
 title: "DIY dicts"
-subtitle: "CSc 120: Introduction to Computer Programming II"
+subtitle: "CSC 120: Introduction to Computer Programming II"
 ---
 
 ## Core Requirements
